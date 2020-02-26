@@ -14,6 +14,8 @@ import { VehicleDetailComponent } from './vehicle-detail.component';
 import { VehicleEditComponent } from './vehicle-edit.component';
 import { VehicleDeleteComponent } from './vehicle-delete.component';
 import { VehicleCreateComponent } from './vehicle-create.component';
+import { QuestionDetailComponent } from './question-detail.component';
+import { QuestionListComponent } from './question-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { VehicleCreateComponent } from './vehicle-create.component';
     VehicleDetailComponent,
     VehicleEditComponent,
     VehicleDeleteComponent,
-    VehicleCreateComponent
+    VehicleCreateComponent,
+    QuestionDetailComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,

@@ -16,3 +16,11 @@ export class Vehicle {
   photo: string;
   description: string;
 }
+
+export class Question {
+  order: number;
+  question: string;
+  answers: Array<string>;
+  correct: number;
+  image: string;
+}
