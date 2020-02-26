@@ -7,13 +7,6 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav.component';
 import { NotFoundComponent } from './not-found.component';
 import { HomeComponent } from './home.component';
-import { AboutComponent } from './about.component';
-import { ContactComponent } from './contact.component';
-import { VehicleListComponent } from './vehicle-list.component';
-import { VehicleDetailComponent } from './vehicle-detail.component';
-import { VehicleEditComponent } from './vehicle-edit.component';
-import { VehicleDeleteComponent } from './vehicle-delete.component';
-import { VehicleCreateComponent } from './vehicle-create.component';
 import { QuestionDetailComponent } from './question-detail.component';
 import { QuestionListComponent } from './question-list.component';
 
@@ -23,13 +16,6 @@ import { QuestionListComponent } from './question-list.component';
     NavComponent,
     NotFoundComponent,
     HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    VehicleListComponent,
-    VehicleDetailComponent,
-    VehicleEditComponent,
-    VehicleDeleteComponent,
-    VehicleCreateComponent,
     QuestionDetailComponent,
     QuestionListComponent
   ],
