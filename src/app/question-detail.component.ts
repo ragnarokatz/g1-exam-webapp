@@ -49,7 +49,19 @@ export class QuestionDetailComponent implements OnInit {
       });
   }
 
+  checkAnswer() {
+    console.log(this.selection);
+    console.log(this.question.correct);
+    if (this.selection == this.question.correct) {
+      this.state = "correct";
+    } else {
+      this.state = "wrong";
+    }
+  }
+
   // Properties
   question: Question;
   id: string;
+  selection: number;
+  state: string;
 }
