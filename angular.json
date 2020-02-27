@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tutorial": {
+    "g1-exam-webapp": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -35,7 +35,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-tutorial",
+            "outputPath": "dist/g1-exam-webapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -80,18 +80,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-tutorial:build"
+            "browserTarget": "g1-exam-webapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-tutorial:build:production"
+              "browserTarget": "g1-exam-webapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-tutorial:build"
+            "browserTarget": "g1-exam-webapp:build"
           }
         },
         "test": {
@@ -125,7 +125,7 @@
         }
       }
     },
-    "angular-tutorial-e2e": {
+    "g1-exam-webapp-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -134,11 +134,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-tutorial:serve"
+            "devServerTarget": "g1-exam-webapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-tutorial:serve:production"
+              "devServerTarget": "g1-exam-webapp:serve:production"
             }
           }
         },
@@ -154,5 +154,5 @@
       }
     }
   },
-  "defaultProject": "angular-tutorial"
+  "defaultProject": "g1-exam-webapp"
 }
