@@ -3,31 +3,32 @@
     <div class="modal-header">
       <h3><span class="label label-warning" id="qid">{{ question.order }}</span> {{ question.question }}</h3>
     </div>
-    <form (ngSubmit)='checkAnswer()'>
-      <div class="modal-body">
-        <div class="quiz" id="quiz" data-toggle="buttons">
-          <label class="element-animation btn btn-lg btn-primary btn-block"><span class="btn-label"><i
-                class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" [(ngModel)]="selection"
-              name="q_answer" value="1">
-            {{ question.answers[0] }}</label>
-          <label class="element-animation btn btn-lg btn-primary btn-block"><span class="btn-label"><i
-                class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" [(ngModel)]="selection"
-              name="q_answer" value="2">
-            {{ question.answers[1] }}</label>
-          <label class="element-animation btn btn-lg btn-primary btn-block"><span class="btn-label"><i
-                class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" [(ngModel)]="selection"
-              name="q_answer" value="3">
-            {{ question.answers[2] }}</label>
-          <label class="element-animation btn btn-lg btn-primary btn-block"><span class="btn-label"><i
-                class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" [(ngModel)]="selection"
-              name="q_answer" value="4">
-            {{ question.answers[3] }}</label>
+
+
+    <div class="modal-body">
+      <form (ngSubmit)='checkAnswer()'>
+        <div class="quiz" id="quiz">
+          <div *ngFor="let answer of question.answers; let i=index">
+            <label class="element-animation btn btn-lg btn-primary btn-block"><span class="btn-label"><i
+                  class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" [(ngModel)]="selection"
+                name="q_answer" [value]="i">
+              {{ answer }}</label>
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        {{ state }}
-        <button class="btn btn-primary" type="submit">Check Answer</button>&nbsp;
-      </div>
-    </form>
+
+        <hr />
+
+        <span *ngIf="state === 'correct'"><span class="glyphicon glyphicon-ok"></span></span>
+        <span *ngIf="state === 'wrong'"><span class="glyphicon glyphicon-remove"></span></span>
+        <button class="btn btn-primary pull-right" type="submit">Check Answer</button>&nbsp;
+      </form>
+
+      <br />
+
+    </div>
+
+    <div class="modal-footer">
+
+    </div>
   </div>
 </div>

@@ -323,3 +323,12 @@
       }
   }
   
+  .glyphicon.glyphicon-ok {
+    font-size: 40px;
+    color: green;
+}
+
+.glyphicon.glyphicon-remove {
+    font-size: 40px;
+    color: red;
+}
