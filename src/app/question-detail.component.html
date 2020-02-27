@@ -2,6 +2,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <h3><span class="label label-warning" id="qid">{{ question.order }}</span> {{ question.question }}</h3>
+      <span *ngIf="question.image"><img [src]="question.image" alt="" class="img-responsive pull-right"></span>
     </div>
 
 
