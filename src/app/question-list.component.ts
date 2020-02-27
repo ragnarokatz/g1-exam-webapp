@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Question } from "./data-classes";
-import { environment } from './../environments/environment';
+import { environment } from "./../environments/environment";
 
 @Component({
-  selector: 'app-question-list',
-  templateUrl: './question-list.component.html',
-  styleUrls: ['./question-list.component.css']
+  selector: "app-question-list",
+  templateUrl: "./question-list.component.html",
+  styleUrls: ["./question-list.component.css"]
 })
 export class QuestionListComponent implements OnInit {
+  // Initialization
 
-  // Initialization 
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     var url = environment.apiURL + `api/questions`;

@@ -1,23 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Question } from "./data-classes";
-import { environment } from './../environments/environment';
+import { environment } from "./../environments/environment";
 
 // Enables access to the route / URL
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-question-detail',
-  templateUrl: './question-detail.component.html',
-  styleUrls: ['./question-detail.component.css']
+  selector: "app-question-detail",
+  templateUrl: "./question-detail.component.html",
+  styleUrls: ["./question-detail.component.css"]
 })
 export class QuestionDetailComponent implements OnInit {
+  // Initialization
 
-  // Initialization 
-
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-
     // Extract the identifier from the URL
     this.id = this.route.snapshot.paramMap.get("id");
 

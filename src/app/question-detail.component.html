@@ -1,36 +1,51 @@
 <div class="container-fluid bg-info">
   <div class="modal-content">
     <div class="modal-header">
-      <h3><span class="label label-warning" id="qid">{{ question?.order }}</span> {{ question?.question }}</h3>
+      <h3>
+        <span class="label label-warning" id="qid">{{ question?.order }}</span>
+        {{ question?.question }}
+      </h3>
       <br />
-      <span *ngIf="question?.image"><img [src]="question.image" alt="" class="img-responsive img-max"></span>
+      <span *ngIf="question?.image"
+        ><img [src]="question.image" alt="" class="img-responsive img-max"
+      /></span>
     </div>
 
-
     <div class="modal-body">
-      <form (ngSubmit)='checkAnswer()'>
+      <form (ngSubmit)="checkAnswer()">
         <div class="quiz" id="quiz">
-          <div *ngFor="let answer of question?.answers; let i=index">
-            <label class="element-animation btn btn-lg btn-primary btn-block"><span class="btn-label"><i
-                  class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" [(ngModel)]="selection"
-                name="q_answer" [value]="i">
-              {{ answer }}</label>
+          <div *ngFor="let answer of question?.answers; let i = index">
+            <label class="element-animation btn btn-lg btn-primary btn-block"
+              ><span class="btn-label"
+                ><i class="glyphicon glyphicon-chevron-right"></i
+              ></span>
+              <input
+                type="radio"
+                [(ngModel)]="selection"
+                name="q_answer"
+                [value]="i"
+              />
+              {{ answer }}</label
+            >
           </div>
         </div>
 
         <hr />
 
-        <span *ngIf="state === 'correct'"><span class="glyphicon glyphicon-ok"></span></span>
-        <span *ngIf="state === 'wrong'"><span class="glyphicon glyphicon-remove"></span></span>
-        <button class="btn btn-primary pull-right" type="submit">Check Answer</button>&nbsp;
+        <span *ngIf="state === 'correct'"
+          ><span class="glyphicon glyphicon-ok"></span
+        ></span>
+        <span *ngIf="state === 'wrong'"
+          ><span class="glyphicon glyphicon-remove"></span
+        ></span>
+        <button class="btn btn-primary pull-right" type="submit">
+          检查答案</button
+        >&nbsp;
       </form>
 
       <br />
-
     </div>
 
-    <div class="modal-footer">
-
-    </div>
+    <div class="modal-footer"></div>
   </div>
 </div>

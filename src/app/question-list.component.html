@@ -1,19 +1,29 @@
 <div class="container-fluid bg-info">
   <div class="modal-content">
     <div class="modal-header">
-      <h3>Questions list</h3>
+      <h3>问题列表</h3>
     </div>
     <div class="modal-body">
-      <div class="quiz" id="quiz" data-toggle="buttons" *ngFor="let q of questions">
-        <label class="element-animation btn btn-lg btn-primary btn-block" routerLink="/questions/detail/{{ q.order }}">
+      <div
+        class="quiz"
+        id="quiz"
+        data-toggle="buttons"
+        *ngFor="let q of questions"
+      >
+        <label
+          class="element-animation btn btn-lg btn-primary btn-block"
+          routerLink="/questions/detail/{{ q.order }}"
+        >
           <span class="btn-label">
             <i class="glyphicon glyphicon-chevron-right"></i>
           </span>
-          Question {{ q.order }}
+          {{ q.order }}: {{ q.question }}
+          <span *ngIf="q?.image"
+            ><img [src]="q.image" alt="" class="imgInTable img-max"
+          /></span>
         </label>
       </div>
     </div>
-    <div class="modal-footer">
-    </div>
+    <div class="modal-footer"></div>
   </div>
 </div>
