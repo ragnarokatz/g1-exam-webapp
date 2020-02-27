@@ -13,17 +13,18 @@ import { ActivatedRoute } from "@angular/router";
 export class QuestionDetailComponent implements OnInit {
   // Initialization
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     // Extract the identifier from the URL
-    this.id = this.route.snapshot.paramMap.get("id");
+    this.id = parseInt(this.route.snapshot.paramMap.get("id"));
 
     // The following is only one of several ways
     // to convert a string to a number (do your own research)
     // Fetch the requested question object
 
     var url = environment.apiURL + `api/questions/${this.id}`;
+    this.maxQuestionCount = environment.maxQuestionCount;
 
     fetch(url)
       .then(response => {
@@ -57,7 +58,8 @@ export class QuestionDetailComponent implements OnInit {
 
   // Properties
   question: Question;
-  id: string;
+  id: number;
   selection: number;
   state: string;
+  maxQuestionCount: number;
 }
