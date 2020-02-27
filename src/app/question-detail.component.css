@@ -332,3 +332,8 @@
     font-size: 40px;
     color: red;
 }
+
+.img-max {
+    max-width: 150px;
+    width: 100%;
+}
