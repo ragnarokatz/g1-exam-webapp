@@ -1,4 +1,22 @@
-# AngularTutorial
+## README
+
+### Application links
+
+- web-app: https://g1-exam-webapp.herokuapp.com/
+- web-api: https://g1-exam-webapi.herokuapp.com/
+
+### Installation
+
+- `git clone` this repository
+- `npm install`
+- `ng serve`
+- navigate to `localhost:4200` to view
+
+### Bootstrap template used
+
+- https://bootsnipp.com/snippets/DVv0a
+
+# README that came with Angular-cli create new Angular app command
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
